@@ -1,11 +1,14 @@
 import React from 'react';
-
-import { Container } from './styles';
+import { HeaderLogo, Movie } from '../../components';
+import { Container, Input } from './styles';
 
 const Dashboard: React.FC = () => {
   return (
     <Container>
-      <h1>Dashboard</h1>
+      <HeaderLogo />
+      <Input />
+
+      <Movie />
     </Container>
   );
 };
