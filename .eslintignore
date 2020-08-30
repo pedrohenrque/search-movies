@@ -1,0 +1,4 @@
+clients/*/build/*
+clients/*/public/*
+clients/*/src/react-app-env.d.ts
+*/*.js
