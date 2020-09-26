@@ -3,7 +3,14 @@ import cover from '../../assets/example.jpg';
 import { Container, Content, Header, Sinopse, Tags } from './styles';
 import { Link } from 'react-router-dom';
 
-const Movie: React.FC = () => {
+interface InputProps {
+  searchMovie?: string;
+}
+
+const Movie: React.FC<InputProps> = ({ searchMovie }) => {
+  const tagMovie = searchMovie;
+  console.log(tagMovie);
+
   return (
     <Container>
       <Link to="/">
