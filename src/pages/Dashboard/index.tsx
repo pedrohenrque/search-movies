@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { HeaderLogo, Input } from '../../components';
 import noImage from '../../assets/noImage.png';
 
-import { format } from 'date-fns';
+import moment from 'moment';
 
 import {
   Container,
@@ -36,7 +36,6 @@ const Dashboard: React.FC = () => {
 
   useEffect(() => {
     sessionStorage.setItem('@movie:repositories', JSON.stringify(repositories));
-    console.log('teste', repositories);
   }, [repositories]);
 
   async function handleSearch(event: any) {
@@ -53,7 +52,6 @@ const Dashboard: React.FC = () => {
     const replaceMovies = newMovie.replace(' ', '+');
 
     const { data } = await apiPage.get(`&page=1&query=${replaceMovies}`);
-    console.log(data);
 
     if (!data.results[0]) {
       setResultError('Não foi encontrado o filme desejado');
@@ -61,6 +59,7 @@ const Dashboard: React.FC = () => {
 
     setNewMovie('');
     setRepositories(data);
+    console.log(data.results);
   }
 
   function searchGenre(value: any) {
@@ -102,7 +101,7 @@ const Dashboard: React.FC = () => {
                 <Content>
                   <Header>
                     <Title>{repo.title || repo.name}</Title>
-                    <p>{format(new Date(repo.release_date), 'yyyy')}</p>
+                    <p>{moment(repo.release_date).format('YYYY')}</p>
                   </Header>
                   <div
                     style={{
