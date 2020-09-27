@@ -10,7 +10,6 @@ interface InputProps {
 }
 
 const Input: React.FC<InputProps> = ({ value, onChange, onClick }) => {
-  const [inputValue, setInputValue] = useState();
   const [isFocused, setIsFocused] = useState(false);
 
   const handleInputFocus = useCallback(() => {
