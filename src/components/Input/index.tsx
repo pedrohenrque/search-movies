@@ -29,11 +29,7 @@ const Input: React.FC<InputProps> = ({ value, onChange, onClick }) => {
         value={value}
         onChange={onChange}
       />
-      {value && (
-        <button type="button" onClick={onClick}>
-          <MdClose size={25} />
-        </button>
-      )}
+      {value && <button type="submit">Buscar</button>}
     </Container>
   );
 };

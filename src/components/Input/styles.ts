@@ -11,8 +11,9 @@ export const Container = styled.div<ContainerProps>`
   border: 3px solid rgba(255, 255, 255, 0.01);
   background: rgba(255, 255, 255, 0.2);
   border-radius: 30px;
-  transition: 0.2s;
   align-items: center;
+  overflow: hidden;
+  transition: 0.2s;
 
   &:hover {
     border: 3px solid #fe346e;
@@ -39,8 +40,9 @@ export const Container = styled.div<ContainerProps>`
   button {
     align-items: center;
     justify-content: center;
-    margin: 5px 15px 0 0;
-    background: none;
+    /* margin: 0 15px 0 0; */
+    padding: 15px 35px;
+    background: #fe346e;
     border: none;
 
     svg {

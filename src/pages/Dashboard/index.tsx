@@ -19,9 +19,19 @@ import { apiPage } from '../../services/api';
 
 import genreList from '../../util/genreList';
 
+interface MovieProps {
+  id: string;
+  poster_path: string;
+  title: string;
+  name: string;
+  release_date: Date;
+  overview: string;
+  genre_ids: [];
+}
+
 const Dashboard: React.FC = () => {
   const [newMovie, setNewMovie] = useState('');
-  const [inputError, setInputError] = useState('');
+  const [, setInputError] = useState('');
   const [resultError, setResultError] = useState('');
   const poster = 'http://image.tmdb.org/t/p/w342/';
 
@@ -90,7 +100,7 @@ const Dashboard: React.FC = () => {
 
       {repositories?.results && (
         <>
-          {repositories.results.map((repo: any) => (
+          {repositories.results.map((repo: MovieProps) => (
             <Movie key={repo.id}>
               <Link to={`/movies${repo.id}`}>
                 {`${poster}${repo.poster_path}` === `${poster}${null}` ? (

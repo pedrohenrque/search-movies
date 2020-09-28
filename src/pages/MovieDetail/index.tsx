@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
-import { addMinutes, format } from 'date-fns';
 import ReactPlayer from 'react-player';
+import moment from 'moment';
 
 import { apiMovieDetail, key } from '../../services/api';
 
@@ -21,10 +21,16 @@ import {
   Info,
   InfoTag,
   Player,
+  NoTrailer,
 } from './styles';
 
 interface RepositoryProps {
   id: string;
+}
+
+interface GenresProps {
+  id: string;
+  name: string;
 }
 
 const MovieDetail: React.FC = () => {
@@ -43,7 +49,7 @@ const MovieDetail: React.FC = () => {
 
   console.log(repository);
 
-  function handleHours(minutes: any) {
+  function handleHours(minutes: number) {
     const hour = minutes / 60;
     let p = hour.toString().replace('.', 'h');
     let newHour = p.substr(0, 4);
@@ -76,7 +82,7 @@ const MovieDetail: React.FC = () => {
             <Movie>
               <Header>
                 <Title>{repository.title || repository.name}</Title>
-                <p>{format(new Date(repository.release_date), 'yyyy')}</p>
+                <p>{moment(repository.release_date).format('YYYY')}</p>
               </Header>
               <ContentMovie>
                 <Description>
@@ -89,7 +95,7 @@ const MovieDetail: React.FC = () => {
                   )}
                 </Description>
                 <Tags>
-                  {repository.genres.map((g: any) => (
+                  {repository.genres.map((g: GenresProps) => (
                     <p key={g.id}>{g.name}</p>
                   ))}
                 </Tags>
@@ -126,10 +132,7 @@ const MovieDetail: React.FC = () => {
               </InfoTag>
               <InfoTag>
                 <h2>Duração</h2>
-                <p>
-                  {/* {format(addMinutes(new Date(), repository.runtime), 'hh:mm')} */}
-                  {handleHours(repository.runtime)}m
-                </p>
+                <p>{handleHours(repository.runtime)}m</p>
               </InfoTag>
               <InfoTag>
                 <h2>Orçamento</h2>
@@ -148,7 +151,9 @@ const MovieDetail: React.FC = () => {
               </InfoTag>
             </Info>
           </Cards>
-          {repository?.videos?.results[0]?.key === undefined ? null : (
+          {repository?.videos?.results[0]?.key === undefined ? (
+            <NoTrailer>Infelizmente não temos o trailer 😢</NoTrailer>
+          ) : (
             <Player>
               <ReactPlayer
                 url={`https://www.youtube.com/watch?v=${repository.videos.results[0].key}`}

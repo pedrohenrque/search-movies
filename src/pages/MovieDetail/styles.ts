@@ -192,3 +192,11 @@ export const Player = styled.div`
   border-radius: 18px;
   overflow: hidden;
 `;
+
+export const NoTrailer = styled.h1`
+  margin-top: 30px;
+  text-align: center;
+  color: #fe346e;
+  font-size: 26px;
+  font-weight: 400;
+`;
