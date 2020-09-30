@@ -24,7 +24,7 @@ Desnvolver um projeto em Sistemas de Informação sob orientação do professor 
 ## Tecnologias
 
 Este projeto foi desenvolvido com as seguintes tecnologias:
-- [typescript]
+- [typescript](https://www.typescriptlang.org/)
 - [styled-components]
 - [ReactJS]
 - [Axios]
@@ -54,13 +54,10 @@ $ yarn start
 ---
 
 Powernerd by Pedro Henrique - [Follow me on linkedin!](https://www.linkedin.com/in/pedrohenrque/)
-[typescript]: https://www.typescriptlang.org/
+
 [nodejs]: https://nodejs.org/
 [styled-components]: https://styled-components.com/
 [reactjs]: https://pt-br.reactjs.org/
 [react native]: https://reactnative.dev/
 [axios]: https://github.com/axios/axios
 [yarn]: https://yarnpkg.com/
-[vc]: https://code.visualstudio.com/
-[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
-[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
