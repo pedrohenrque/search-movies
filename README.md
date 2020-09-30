@@ -6,15 +6,15 @@
 
 <h3 align="left">  Sobre o desafio</h3>
 <p>
-Desnvolver um projeto em Sistemas de Informação sob orientação do professor e aplicando os conceitos estudados ao longo do curso. Para tanto, utilizará conceitos básicos da Engenharia de Software e seguirá todas as fases de um processo de desenvolvimento de software utilizado na indústria. O processo de ensino e aprendizagem culmina com a apresentação de um projeto de sistemas de informação e da metodologia utilizada durante o desenvolvimento seguindo as boas práticas definidas pelo mercado.
+Desenvolver um projeto em Sistemas de Informação sob orientação do professor e aplicando os conceitos estudados ao longo do curso. Para tanto, utilizará conceitos básicos da Engenharia de Software e seguirá todas as fases de um processo de desenvolvimento de software utilizado na indústria. O processo de ensino e aprendizagem culmina com a apresentação de um projeto de sistemas de informação e da metodologia utilizada durante o desenvolvimento seguindo as boas práticas definidas pelo mercado.
 </p>
-<p><strong>Optei por criar um web app responsivo consumindo a API do The Movie DB e permitindo buscar e ver detalhes de filmes de seu catálogo.</strong>
+<p><strong>Optei por criar um web app responsivo consumindo API do The Movie DB, permitindo buscar e ver detalhes de filmes de seu catálogo.</strong>
 
 <strong> Seguintes funcionalidades:</strong>
 
  <ul><ul>
 <li>Buscar filmes por nome ou gênero</li>
- <li>Trazer resultados da busca: nome, cartaz, data de lançamento, sinopse .</li>
+<li>Trazer resultados da busca: nome, cartaz, data de lançamento, sinopse .</li>
 <li>Ao clicar em um resultado da busca, detalhes do filme além dos mostrados na busca, como: status (lançado, previsto, etc), idioma, duração, orçamento, receita, lucro, categorias e trailer, quando disponíveis.</li>
 <li>Ser responsivo</li>
 <li>Ter boa performance</li>
@@ -29,7 +29,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - [ReactJS]
 - [Axios]
 - [Yarn]
-- [VS Code][vc]
+- [VS Code](https://code.visualstudio.com/)
 
 ## Como usar
 
