@@ -1,44 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+    <img alt="Desafio conceitos nodeJS" src="https://user-images.githubusercontent.com/54694186/94727058-86d1a100-0334-11eb-9b8f-3b163bebf2a0.png" />
+    <br>
+  Laboratório de Desenvolvimento de Sistemas
+</h1>
 
-## Available Scripts
+<h3 align="left">  Sobre o desafio</h3>
+<p>
+Desnvolver um projeto em Sistemas de Informação sob orientação do professor e aplicando os conceitos estudados ao longo do curso. Para tanto, utilizará conceitos básicos da Engenharia de Software e seguirá todas as fases de um processo de desenvolvimento de software utilizado na indústria. O processo de ensino e aprendizagem culmina com a apresentação de um projeto de sistemas de informação e da metodologia utilizada durante o desenvolvimento seguindo as boas práticas definidas pelo mercado.
+</p>
+<p><strong>Optei por criar um web app responsivo consumindo a API do The Movie DB e permitindo buscar e ver detalhes de filmes de seu catálogo.</strong>
 
-In the project directory, you can run:
+<strong> Seguintes funcionalidades:</strong>
 
-### `yarn start`
+ <ul><ul>
+<li>Buscar filmes por nome ou gênero</li>
+ <li>Trazer resultados da busca: nome, cartaz, data de lançamento, sinopse .</li>
+<li>Ao clicar em um resultado da busca, detalhes do filme além dos mostrados na busca, como: status (lançado, previsto, etc), idioma, duração, orçamento, receita, lucro, categorias e trailer, quando disponíveis.</li>
+<li>Ser responsivo</li>
+<li>Ter boa performance</li>
+<li>Funcionar na última versão dos principais browsers (Chrome, Firefox, Safari e Edge)</li></ul>
+</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tecnologias
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Este projeto foi desenvolvido com as seguintes tecnologias:
+- [typescript]
+- [styled-components]
+- [ReactJS]
+- [Axios]
+- [Yarn]
+- [VS Code][vc]
 
-### `yarn test`
+## Como usar
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para utilizar esta aplicação, você precisa do [Git](https://git-scm.com), [Node.js v12.13][nodejs] ou superior + [Yarn v1.13][yarn] ou superior instalado no seu computador. Na sua linha de comando:
 
-### `yarn build`
+```bash
+# Clone este repositório
+$ git clone https://github.com/pedrohenrque/search-movies.git
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Entre no repositório
+$ cd search-movies
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Instale as dependências
+$ yarn ou npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Rode a aplicação
+$ yarn start
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Powernerd by Pedro Henrique - [Follow me on linkedin!](https://www.linkedin.com/in/pedrohenrque/)
+[typescript]: https://www.typescriptlang.org/
+[nodejs]: https://nodejs.org/
+[styled-components]: https://styled-components.com/
+[reactjs]: https://pt-br.reactjs.org/
+[react native]: https://reactnative.dev/
+[axios]: https://github.com/axios/axios
+[yarn]: https://yarnpkg.com/
+[vc]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
