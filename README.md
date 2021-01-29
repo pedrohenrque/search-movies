@@ -21,6 +21,10 @@ Desenvolver um projeto em Sistemas de Informação sob orientação do professor
 <li>Funcionar na última versão dos principais browsers (Chrome, Firefox, Safari e Edge)</li></ul>
 </p>
 
+## Exemplo
+
+<strong>[Vídeo de exemplo!](https://youtu.be/1wHOYucQxlo)</strong>
+
 ## Tecnologias
 
 Este projeto foi desenvolvido com as seguintes tecnologias:
